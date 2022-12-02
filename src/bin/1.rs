@@ -20,6 +20,8 @@ fn main() -> io::Result <()> {
     if cur > 0 {
         v.push(cur);
     }
-    println!("Vec: {:?} Max: {:?}", v, v.iter().max());
+    v.sort();
+    v.reverse();
+    println!("Vec: {:?} Max: {:?} Top3: {}", v, v[0], v[0]+v[1]+v[2]);
     Ok(())
 }
