@@ -7,7 +7,10 @@ use std::fs;
 pub struct Args {
     /// The input file to read.
     #[arg(short, long, default_value_t=String::from("-"))]
-    infile: String,
+    pub infile: String,
+    /// Compute part two of the puzzle.
+    #[arg(short, long, default_value_t=false)]
+    pub part_two: bool,
 }
 
 

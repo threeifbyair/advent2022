@@ -22,6 +22,12 @@ fn main() -> io::Result <()> {
     }
     v.sort();
     v.reverse();
-    println!("Vec: {:?} Max: {:?} Top3: {}", v, v[0], v[0]+v[1]+v[2]);
+    if sup.args.part_two {
+            println!("Top 3: {}", v[0]+v[1]+v[2]);
+    }
+    else
+        {
+            println!("Max: {}", v[0]);
+        }
     Ok(())
 }
