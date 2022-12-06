@@ -30,15 +30,15 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=4",
+                    "--bin=5",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "4",
+                    "name": "5",
                     "kind": "bin"
                 }
             },
-            "args": ["-i", "input/4.txt"],
+            "args": ["-i", "input/5.txt"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -48,15 +48,15 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=4",
+                    "--bin=5",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "4",
+                    "name": "5",
                     "kind": "bin"
                 }
             },
-            "args": ["-i", "input/4-ex.txt"],
+            "args": ["-i", "input/5-ex.txt"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -66,15 +66,15 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=4",
+                    "--bin=5",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "4",
+                    "name": "5",
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/4.txt"],
+            "args": ["-p", "-i", "input/5.txt"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -84,15 +84,15 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=4",
+                    "--bin=5",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "4",
+                    "name": "5",
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/4-ex.txt"],
+            "args": ["-p", "-i", "input/5-ex.txt"],
             "cwd": "${workspaceFolder}"
         }
     ]
