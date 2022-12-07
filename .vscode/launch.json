@@ -30,15 +30,15 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=5",
+                    "--bin=6",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "5",
+                    "name": "6",
                     "kind": "bin"
                 }
             },
-            "args": ["-i", "input/5.txt"],
+            "args": ["-i", "input/6.txt"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -48,15 +48,15 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=5",
+                    "--bin=6",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "5",
+                    "name": "6",
                     "kind": "bin"
                 }
             },
-            "args": ["-i", "input/5-ex.txt"],
+            "args": ["-i", "input/6-ex.txt"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -70,11 +70,11 @@
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "5",
+                    "name": "6",
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/5.txt"],
+            "args": ["-p", "-i", "input/6.txt"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -84,15 +84,15 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=5",
+                    "--bin=6",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "5",
+                    "name": "6",
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/5-ex.txt"],
+            "args": ["-p", "-i", "input/6-ex.txt"],
             "cwd": "${workspaceFolder}"
         }
     ]
