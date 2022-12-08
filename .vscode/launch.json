@@ -26,25 +26,367 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable part 1",
+            "name": "Debug example in day 1 part 1",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=6",
+                    "--bin=1",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "6",
+                    "name": "1",
                     "kind": "bin"
                 }
             },
-            "args": ["-i", "input/6.txt"],
+            "args": ["-i", "input/1-ex.txt"],
             "cwd": "${workspaceFolder}"
         },
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug example in executable part 1",
+            "name": "Debug day 1 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=1",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "1",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/1.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 1 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=1",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "1",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/1-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 1 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=1",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "1",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/1.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 2 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=2",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "2",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/2-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 2 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=2",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "2",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/2.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 2 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=2",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "2",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/2-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 2 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=2",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "2",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/2.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 3 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=3",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "3",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/3-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 3 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=3",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "3",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/3.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 3 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=3",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "3",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/3-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 3 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=3",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "3",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/3.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 4 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=4",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "4",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/4-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 4 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=4",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "4",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/4.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 4 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=4",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "4",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/4-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 4 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=4",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "4",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/4.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 5 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=5",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "5",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/5-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 5 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=5",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "5",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/5.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 5 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=5",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "5",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/5-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 5 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=5",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "5",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/5.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 6 part 1",
             "cargo": {
                 "args": [
                     "build",
@@ -62,11 +404,47 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable part 2",
+            "name": "Debug day 6 part 1",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=5",
+                    "--bin=6",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "6",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/6.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 6 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=6",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "6",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/6-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 6 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=6",
                     "--package=advent2022"
                 ],
                 "filter": {
@@ -80,19 +458,1369 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug example in executable part 2",
+            "name": "Debug example in day 7 part 1",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=6",
+                    "--bin=7",
                     "--package=advent2022"
                 ],
                 "filter": {
-                    "name": "6",
+                    "name": "7",
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/6-ex.txt"],
+            "args": ["-i", "input/7-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 7 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=7",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "7",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/7.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 7 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=7",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "7",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/7-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 7 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=7",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "7",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/7.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 8 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=8",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "8",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/8-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 8 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=8",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "8",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/8.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 8 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=8",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "8",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/8-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 8 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=8",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "8",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/8.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 9 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=9",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "9",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/9-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 9 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=9",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "9",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/9.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 9 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=9",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "9",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/9-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 9 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=9",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "9",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/9.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 10 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=10",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "10",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/10-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 10 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=10",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "10",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/10.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 10 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=10",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "10",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/10-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 10 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=10",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "10",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/10.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 11 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=11",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "11",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/11-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 11 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=11",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "11",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/11.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 11 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=11",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "11",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/11-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 11 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=11",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "11",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/11.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 12 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=12",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "12",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/12-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 12 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=12",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "12",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/12.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 12 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=12",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "12",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/12-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 12 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=12",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "12",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/12.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 13 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=13",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "13",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/13-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 13 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=13",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "13",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/13.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 13 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=13",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "13",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/13-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 13 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=13",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "13",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/13.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 14 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=14",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "14",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/14-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 14 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=14",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "14",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/14.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 14 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=14",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "14",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/14-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 14 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=14",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "14",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/14.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 15 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=15",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "15",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/15-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 15 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=15",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "15",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/15.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 15 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=15",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "15",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/15-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 15 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=15",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "15",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/15.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 16 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=16",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "16",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/16-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 16 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=16",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "16",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/16.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 16 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=16",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "16",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/16-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 16 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=16",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "16",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/16.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 17 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=17",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "17",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/17-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 17 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=17",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "17",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/17.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 17 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=17",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "17",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/17-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 17 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=17",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "17",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/17.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 18 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=18",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "18",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/18-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 18 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=18",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "18",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/18.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 18 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=18",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "18",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/18-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 18 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=18",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "18",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/18.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 19 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=19",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "19",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/19-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 19 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=19",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "19",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/19.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 19 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=19",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "19",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/19-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 19 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=19",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "19",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/19.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 20 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=20",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "20",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/20-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 20 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=20",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "20",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/20.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 20 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=20",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "20",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/20-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 20 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=20",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "20",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/20.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 21 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=21",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "21",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/21-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 21 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=21",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "21",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/21.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 21 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=21",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "21",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/21-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 21 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=21",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "21",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/21.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 22 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=22",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "22",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/22-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 22 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=22",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "22",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/22.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 22 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=22",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "22",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/22-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 22 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=22",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "22",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/22.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 23 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=23",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "23",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/23-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 23 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=23",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "23",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/23.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 23 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=23",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "23",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/23-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 23 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=23",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "23",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/23.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 24 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=24",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "24",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/24-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 24 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=24",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "24",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/24.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 24 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=24",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "24",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/24-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 24 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=24",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "24",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/24.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 25 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=25",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "25",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/25-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 25 part 1",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=25",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "25",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-i", "input/25.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example in day 25 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=25",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "25",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/25-ex.txt"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug day 25 part 2",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=25",
+                    "--package=advent2022"
+                ],
+                "filter": {
+                    "name": "25",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-p", "-i", "input/25.txt"],
             "cwd": "${workspaceFolder}"
         }
     ]

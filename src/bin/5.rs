@@ -29,35 +29,32 @@ fn main() -> io::Result <()> {
                 stacks[dst].push(*c);
             }
         }
-        else 
-        {
-            if line.len() == 0 {
-                // OK. Time to switch to move commands.
-                gotblank = true;
-                let mut newstacks: Vec<Vec<char>> = vec![];
-                for mut s in stacks {
-                    s.reverse();
-                    newstacks.push(s);
-                }
-                stacks = newstacks;
+        else if line.is_empty() {
+            // OK. Time to switch to move commands.
+            gotblank = true;
+            let mut newstacks: Vec<Vec<char>> = vec![];
+            for mut s in stacks {
+                s.reverse();
+                newstacks.push(s);
             }
-            else
+            stacks = newstacks;
+        }
+        else
+        {
+            // This will be a representation of the stack contents
+            let mut offset = 0;
+            let linelen = line.len();
+            let linechars: Vec<char> = line.chars().collect();
+            while offset < linelen 
             {
-                // This will be a representation of the stack contents
-                let mut offset = 0;
-                let linelen = line.len();
-                let linechars: Vec<char> = line.chars().collect();
-                while offset < linelen 
-                {
-                    let c = linechars[offset+1];
-                    while stacks.len() <= offset/4 {
-                        stacks.push(vec![]);
-                    }
-                    if c != ' ' {                    
-                        stacks[offset/4].push(c);
-                    }
-                    offset += 4;
+                let c = linechars[offset+1];
+                while stacks.len() <= offset/4 {
+                    stacks.push(vec![]);
                 }
+                if c != ' ' {                    
+                    stacks[offset/4].push(c);
+                }
+                offset += 4;
             }
         }
 

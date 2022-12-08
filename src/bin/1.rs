@@ -6,14 +6,14 @@ fn main() -> io::Result <()> {
     let mut v: Vec<i32> = vec![];
     let mut cur: i32 = 0;
     for line in sup.lines {
-        let innerline = line?;
-        if innerline.len() == 0 {
+        let line = line?;
+        if line.is_empty() {
             v.push(cur);
             cur = 0;
         }
         else
         {
-            let upd: i32 = innerline.parse().unwrap();
+            let upd: i32 = line.parse().unwrap();
             cur += upd;
         }
     }

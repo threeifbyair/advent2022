@@ -8,10 +8,10 @@ fn main() -> io::Result <()> {
     for line in sup.lines {
         let line = line?;
         // Split the line by commas.
-        let commas = line.split(",");
+        let commas = line.split(',');
         let mut limits: Vec<Vec<i32>> = vec![];
         for c in commas {
-            let lim = c.split("-");
+            let lim = c.split('-');
             let mut lvec: Vec<i32> = vec![];
             for l in lim {
                 let l: i32 = l.parse().unwrap();
@@ -19,29 +19,13 @@ fn main() -> io::Result <()> {
             }
             limits.push(lvec);
         }
-        if sup.args.part_two {
-            if limits[0][0] <= limits[1][0] && limits[0][1] >= limits[1][0] {
-                score += 1;
-            }   
-            else if limits[0][0] <= limits[1][1] && limits[0][1] >= limits[1][1] {
-                score += 1;
-            }   
-            else if limits[1][0] <= limits[0][0] && limits[1][1] >= limits[0][0] {
-                score += 1;
-            }   
-            else if limits[1][0] <= limits[0][1] && limits[1][1] >= limits[0][1] {
-                score += 1;
-            }   
+        if (limits[0][0] <= limits[1][0] && limits[0][1] >= limits[1][1]) ||
+            (limits[0][0] >= limits[1][0] && limits[0][1] <= limits[1][1]) || 
+           (sup.args.part_two &&
+            ((limits[1][0] <= limits[0][0] && limits[1][1] >= limits[0][0]) || 
+             (limits[1][0] <= limits[0][1] && limits[1][1] >= limits[0][1]))) {
+            score += 1;
         }
-        else
-        {
-           if limits[0][0] <= limits[1][0] && limits[0][1] >= limits[1][1] {
-                score += 1;
-            }   
-            else if limits[0][0] >= limits[1][0] && limits[0][1] <= limits[1][1] {
-                score += 1;
-            }   
-        }   
     }
     println!("Score: {}", score);
     Ok(())
