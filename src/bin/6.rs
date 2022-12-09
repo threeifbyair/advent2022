@@ -1,8 +1,8 @@
 use advent2022::Support;
-use std::io;
 use std::collections::hash_set::HashSet;
+use std::io;
 
-fn main() -> io::Result <()> {    
+fn main() -> io::Result<()> {
     let sup = Support::new()?;
 
     for line in sup.lines {
@@ -12,16 +12,15 @@ fn main() -> io::Result <()> {
         for i in 0..line.len() {
             if i < distinct {
                 window.push(line[i..=i].chars().next().unwrap());
-            }
-            else {
+            } else {
                 window.remove(0);
                 window.push(line[i..=i].chars().next().unwrap());
                 let hash: HashSet<&char> = HashSet::from_iter(window.iter());
                 if hash.len() == distinct {
-                    println!("Marker at position {}", i+1);
+                    println!("Marker at position {}", i + 1);
                     break;
                 }
-            }   
+            }
         }
     }
     Ok(())

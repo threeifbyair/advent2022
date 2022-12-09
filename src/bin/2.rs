@@ -8,10 +8,7 @@ struct Rps {
 
 impl Rps {
     pub fn new(val: u8, beats: u8) -> Self {
-        Self {
-            val,
-            beats
-        }
+        Self { val, beats }
     }
 
     pub fn score(&self, other: &Self) -> u32 {
@@ -23,8 +20,8 @@ impl Rps {
         (self.val + outcome) as u32
     }
 }
-       
-fn main() -> io::Result <()> {
+
+fn main() -> io::Result<()> {
     let sup = Support::new()?;
 
     let rock = Rps::new(1, 3);
@@ -47,11 +44,9 @@ fn main() -> io::Result <()> {
                     _ if line == *"A Z" => paper.score(&rock),
                     _ if line == *"B Z" => scissors.score(&paper),
                     _ if line == *"C Z" => rock.score(&scissors),
-                    _ => panic!()
+                    _ => panic!(),
                 }
-            }
-            else
-            {
+            } else {
                 match line {
                     _ if line == *"A X" => rock.score(&rock),
                     _ if line == *"B X" => rock.score(&paper),
@@ -62,7 +57,7 @@ fn main() -> io::Result <()> {
                     _ if line == *"A Z" => scissors.score(&rock),
                     _ if line == *"B Z" => scissors.score(&paper),
                     _ if line == *"C Z" => scissors.score(&scissors),
-                    _ => panic!()
+                    _ => panic!(),
                 }
             }
         };

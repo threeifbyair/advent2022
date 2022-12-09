@@ -1,12 +1,12 @@
 use advent2022::Support;
-use std::io;
 use regex::Regex;
+use std::io;
 
-fn main() -> io::Result <()> {    
+fn main() -> io::Result<()> {
     let sup = Support::new()?;
 
     let mut stacks: Vec<Vec<char>> = vec![];
-    let mut gotblank = false; 
+    let mut gotblank = false;
     let movere = Regex::new(r"^move (\d+) from (\d+) to (\d+)$").unwrap();
     for line in sup.lines {
         let line = line?;
@@ -28,8 +28,7 @@ fn main() -> io::Result <()> {
             for c in localstack.iter() {
                 stacks[dst].push(*c);
             }
-        }
-        else if line.is_empty() {
+        } else if line.is_empty() {
             // OK. Time to switch to move commands.
             gotblank = true;
             let mut newstacks: Vec<Vec<char>> = vec![];
@@ -38,30 +37,26 @@ fn main() -> io::Result <()> {
                 newstacks.push(s);
             }
             stacks = newstacks;
-        }
-        else
-        {
+        } else {
             // This will be a representation of the stack contents
             let mut offset = 0;
             let linelen = line.len();
             let linechars: Vec<char> = line.chars().collect();
-            while offset < linelen 
-            {
-                let c = linechars[offset+1];
-                while stacks.len() <= offset/4 {
+            while offset < linelen {
+                let c = linechars[offset + 1];
+                while stacks.len() <= offset / 4 {
                     stacks.push(vec![]);
                 }
-                if c != ' ' {                    
-                    stacks[offset/4].push(c);
+                if c != ' ' {
+                    stacks[offset / 4].push(c);
                 }
                 offset += 4;
             }
         }
-
     }
     let mut finalstack: Vec<char> = vec![];
     for mut s in stacks {
-            finalstack.push(s.pop().unwrap());
+        finalstack.push(s.pop().unwrap());
     }
     println!("Final stack: {:?}", finalstack);
     Ok(())

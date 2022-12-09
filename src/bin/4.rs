@@ -1,7 +1,7 @@
 use advent2022::Support;
 use std::io;
 
-fn main() -> io::Result <()> {    
+fn main() -> io::Result<()> {
     let sup = Support::new()?;
 
     let mut score: u32 = 0;
@@ -19,11 +19,12 @@ fn main() -> io::Result <()> {
             }
             limits.push(lvec);
         }
-        if (limits[0][0] <= limits[1][0] && limits[0][1] >= limits[1][1]) ||
-            (limits[0][0] >= limits[1][0] && limits[0][1] <= limits[1][1]) || 
-           (sup.args.part_two &&
-            ((limits[1][0] <= limits[0][0] && limits[1][1] >= limits[0][0]) || 
-             (limits[1][0] <= limits[0][1] && limits[1][1] >= limits[0][1]))) {
+        if (limits[0][0] <= limits[1][0] && limits[0][1] >= limits[1][1])
+            || (limits[0][0] >= limits[1][0] && limits[0][1] <= limits[1][1])
+            || (sup.args.part_two
+                && ((limits[1][0] <= limits[0][0] && limits[1][1] >= limits[0][0])
+                    || (limits[1][0] <= limits[0][1] && limits[1][1] >= limits[0][1])))
+        {
             score += 1;
         }
     }

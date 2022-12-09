@@ -1,6 +1,6 @@
 use clap::Parser;
-use std::io::{self, BufRead};
 use std::fs;
+use std::io::{self, BufRead};
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about=None)]
@@ -9,13 +9,12 @@ pub struct Args {
     #[arg(short, long, default_value_t=String::from("-"))]
     pub infile: String,
     /// Compute part two of the puzzle.
-    #[arg(short, long, default_value_t=false)]
+    #[arg(short, long, default_value_t = false)]
     pub part_two: bool,
 }
 
-
 pub struct Support {
-    pub args : Args,
+    pub args: Args,
     pub lines: Vec<io::Result<String>>,
 }
 
@@ -25,8 +24,7 @@ impl Support {
         let bufread: Box<dyn io::BufRead> = {
             if args.infile == "-" {
                 Box::new(io::stdin().lock())
-            }
-            else {
+            } else {
                 let f = fs::File::open(&args.infile)?;
                 let f = io::BufReader::new(f);
                 Box::new(f)
@@ -34,9 +32,6 @@ impl Support {
         };
 
         let lines: Vec<io::Result<String>> = bufread.lines().collect();
-        Ok(Support {
-            args,
-            lines
-        })
+        Ok(Support { args, lines })
     }
 }
