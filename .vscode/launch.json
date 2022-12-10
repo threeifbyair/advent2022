@@ -650,7 +650,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/9-ex.txt"],
+            "args": ["-p", "-i", "input/9-ex2.txt"],
             "cwd": "${workspaceFolder}"
         },
         {
