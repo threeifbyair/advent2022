@@ -1,6 +1,7 @@
 use clap::Parser;
 use std::fs;
 use std::io::{self, BufRead};
+use std::collections::VecDeque;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about=None)]
@@ -15,7 +16,7 @@ pub struct Args {
 
 pub struct Support {
     pub args: Args,
-    pub lines: Vec<io::Result<String>>,
+    pub lines: VecDeque<io::Result<String>>,
 }
 
 impl Support {
@@ -31,7 +32,7 @@ impl Support {
             }
         };
 
-        let lines: Vec<io::Result<String>> = bufread.lines().collect();
+        let lines: VecDeque<io::Result<String>> = bufread.lines().collect();
         Ok(Support { args, lines })
     }
 }
