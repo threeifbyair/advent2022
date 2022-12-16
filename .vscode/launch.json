@@ -1046,7 +1046,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["-i", "input/15-ex.txt"],
+            "args": ["-i", "input/15-ex.txt", "-a", "10"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -1064,7 +1064,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["-i", "input/15.txt"],
+            "args": ["-i", "input/15.txt", "-a", "2000000"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -1082,7 +1082,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/15-ex.txt"],
+            "args": ["-p", "-i", "input/15-ex.txt", "-a", "20"],
             "cwd": "${workspaceFolder}"
         },
         {
@@ -1100,7 +1100,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/15.txt"],
+            "args": ["-p", "-i", "input/15.txt", "-a". "4000000"],
             "cwd": "${workspaceFolder}"
         },
         {

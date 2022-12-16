@@ -12,6 +12,9 @@ pub struct Args {
     /// Compute part two of the puzzle.
     #[arg(short, long, default_value_t = false)]
     pub part_two: bool,
+    /// An integer argument.
+    #[arg(short, long, default_value_t = 0)]
+    pub argint: i32,
 }
 
 pub struct Support {
