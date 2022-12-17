@@ -200,16 +200,45 @@ fn main() -> io::Result<()> {
 
     }
 
-    //cave.print();
-    println!("Calculating nonbeacons");
+    if sup.args.argint < 100 {
+        cave.print();
+    }
 
-    let row = &cave.rows[(sup.args.argint - cave.yrange.0) as usize];
+    if sup.args.part_two {
+        println!("Calculating position of beacon");
 
-    let nonbeacons = row.contents.iter().fold(0, |acc, (x1, x2)| {
-        acc + (x2 - x1 + 1)
-    }) - (row.beacons.len() as i32);
+        for (y, row) in cave.rows.iter().enumerate() {
+            for (x1, x2) in row.contents.iter() {
+                if *x1 <= 0 && *x2 >= sup.args.argint * 2 {
+                    // This is not our line.
+                    break;
+                }
+                if *x2 < 0 {
+                    // Not there yet
+                    continue;
+                }
+                if *x1 > sup.args.argint * 2 {
+                    // Too far
+                    break;
+                }
+                let beaconx = { if *x1 > 0 { 0 } else { *x2 + 1 } };
+                println!("Beacon at ({}, {}), frequency {}", beaconx, y as i32 - cave.yrange.0, (beaconx as u64 * 4000000 as u64) + (y as u64) - cave.yrange.0 as u64);
+                return Ok(());
+            }
+        }
 
-    println!("Nonbeacons: {}", nonbeacons);
+    }
+    else {
+        println!("Calculating nonbeacons");
+
+        let row = &cave.rows[(sup.args.argint - cave.yrange.0) as usize];
+
+        let nonbeacons = row.contents.iter().fold(0, |acc, (x1, x2)| {
+            acc + (x2 - x1 + 1)
+        }) - (row.beacons.len() as i32);
+
+        println!("Nonbeacons: {}", nonbeacons);
+    }
 
     Ok(())
 }
