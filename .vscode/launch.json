@@ -1100,7 +1100,7 @@
                     "kind": "bin"
                 }
             },
-            "args": ["-p", "-i", "input/15.txt", "-a". "4000000"],
+            "args": ["-p", "-i", "input/15.txt", "-a", "4000000"],
             "cwd": "${workspaceFolder}"
         },
         {
