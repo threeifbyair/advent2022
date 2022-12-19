@@ -32,6 +32,23 @@ impl Hash for LocationSet {
     }
 }
 
+#[derive(Debug, Clone, PartialEq, Eq)]
+struct LocationPair {
+    pair: Vec<Location>,
+}
+
+impl Hash for LocationPair {
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        let mut selfiter = self.pair.clone();
+        selfiter.sort();
+        for loc in selfiter {
+            loc.hash(state);
+        }
+    }
+}
+
+
+
 #[derive(Debug, Clone, Default)]
 struct Valve {
     rate: usize,
@@ -47,21 +64,48 @@ enum Move {
 
 #[derive(Debug, Clone)]
 struct Set {
-    location: Location,
+    location: LocationPair,
     openvalves: LocationSet,
     currentflow: usize,
     totalflow: usize,
-    history: Vec<Move>,
+    history: Vec<(Move, Move)>,
+}
+
+impl Set {
+    fn apply_move(&mut self, m: Move, which: usize, valves: &HashMap<Location, Valve>) {
+        match m {
+            Move::Open(loc) => {
+                self.openvalves.st.insert(loc);
+                self.currentflow += valves.get(&loc).unwrap().rate;
+            },
+            Move::Move(loc) => {
+                self.location.pair[which] = loc;
+            },
+            Move::Stay => {
+            },
+        };
+        if which == 0 {
+            self.history.push((m, Move::Stay));
+        }
+        else {
+            let oldmove = self.history.pop().unwrap();
+            self.history.push((oldmove.0, m));
+        }
+
+    }
+
 }
 
 fn check_and_add_set(
-    sets_done: &mut HashMap<LocationSet, HashMap<Location, usize>>,
+    sets_done: &mut HashMap<LocationSet, HashMap<LocationPair, usize>>,
     set: &Set,
 ) -> bool {
+    let mut compare_key = LocationPair { pair: set.location.pair.clone() };
+    compare_key.pair.sort();
     if sets_done.contains_key(&set.openvalves) {
         let compare_map = &mut sets_done.get_mut(&set.openvalves).unwrap();
-        if compare_map.contains_key(&set.location) {
-            let val = compare_map.get_mut(&set.location).unwrap();
+        if compare_map.contains_key(&compare_key) {
+            let val = compare_map.get_mut(&compare_key).unwrap();
             if *val < set.totalflow {
                 *val = set.totalflow;
                 //println!("Updating {:?} {:?}", set.openvalves, set.location);
@@ -71,14 +115,28 @@ fn check_and_add_set(
                 return false;
             }
         }
-        compare_map.insert(set.location, set.totalflow);
+        compare_map.insert(compare_key, set.totalflow);
     } else {
-        let mut locations: HashMap<Location, usize> = HashMap::new();
-        locations.insert(set.location, set.totalflow);
+        let mut locations: HashMap<LocationPair, usize> = HashMap::new();
+        locations.insert(compare_key, set.totalflow);
         sets_done.insert(set.openvalves.clone(), locations);
     }
     //println!("Adding {:?} {:?}", set.openvalves, set.location);
     return true;
+}
+
+fn find_moves(set: &Set, valves: &HashMap<Location, Valve>, which: usize) -> Vec<Move> {
+    let mut moves: Vec<Move> = vec![];
+    let valve = valves.get(&set.location.pair[which]).unwrap();
+    if !set.openvalves.st.contains(&set.location.pair[which]) && valve.rate > 0 {
+        // This valve is closed, so we should open it
+        moves.push(Move::Open(set.location.pair[which]));
+    }
+    moves.push(Move::Stay);
+    for dest in &valve.dests {
+        moves.push(Move::Move(*dest));
+    }
+    moves
 }
 
 fn main() -> io::Result<()> {
@@ -116,19 +174,21 @@ fn main() -> io::Result<()> {
 
     let mut sets: Vec<Set> = Vec::new();
     sets.push(Set {
-        location: Location { loc: ('A', 'A') },
+        location: LocationPair { pair: vec![Location { loc: ('A', 'A') } , Location { loc: ('A', 'A') } ] },
         openvalves: LocationSet { st: HashSet::new() },
         currentflow: 0,
         totalflow: 0,
         history: vec![],
     });
 
-    let mut sets_done: HashMap<LocationSet, HashMap<Location, usize>> = HashMap::new();
+    let mut sets_done: HashMap<LocationSet, HashMap<LocationPair, usize>> = HashMap::new();
     let max_flow = valves.iter().fold(0, |acc, (_, v)| acc + v.rate);
 
     println!("\n\nStarting search with max flow {}", max_flow);
 
-    for i in 1..=30 {
+    let minutes = if sup.args.part_two { 26 } else { 30 };
+
+    for i in 1..=minutes {
         println!("Iteration {} with {} sets", i, sets.len());
         let mut newsets: Vec<Set> = Vec::new();
         let best_flow = sets[0].totalflow;
@@ -136,43 +196,27 @@ fn main() -> io::Result<()> {
             let mut set = set;
             //println!("\nConsidering set {:?}", set);
             set.totalflow += set.currentflow;
-            let valve = valves.get(&set.location).unwrap();
-            if !set.openvalves.st.contains(&set.location) && valve.rate > 0 {
-                // This valve is closed, so we should open it
-                let mut newset = set.clone();
-                newset.openvalves.st.insert(set.location);
-                newset.history.push(Move::Open(set.location));
-                newset.currentflow += valve.rate;
-                if check_and_add_set(&mut sets_done, &newset) {
-                    //println!("Opening valve {:?}", set.location);
-                    newsets.push(newset);
-                }
-                else {
-                    //println!("Not opening valve {:?} because it's already been done", set.location);
-                }
-            }
-            // Now try moving
-            let mut newset = set.clone();
-            newset.history.push(Move::Stay);
-            if (newset.totalflow + max_flow*(30-i)) >= best_flow {
-                //println!("Sticking, still OK because we can get to {} at {}", best_flow, newset.totalflow + max_flow*(30-i));                                                                                          
-                newsets.push(newset); 
+            let moves = find_moves(&set, &valves, 0);
+            let elephantmoves = 
+            if sup.args.part_two {
+                find_moves(&set, &valves, 1)
             }
             else {
-                //println!("Sticking, but we can't get to {} at {}", best_flow, newset.totalflow + max_flow*(30-i));
-            }
-            for dest in &valve.dests {
-                let mut newset = set.clone();
-                newset.location = *dest;
-                newset.history.push(Move::Move(*dest));
-                if check_and_add_set(&mut sets_done, &newset) {
-                    //println!("Moving to {:?}", dest);
-                    newsets.push(newset);
+                vec![Move::Stay]
+            };
+            //println!("Moves: {:?}", moves);
+            for m in moves.into_iter() {
+                for n in elephantmoves.clone() {
+                    let mut newset = set.clone();
+                    let tm = m.clone();
+                    newset.apply_move(tm, 0, &valves);
+                    newset.apply_move(n, 1, &valves);
+                    if check_and_add_set(&mut sets_done, &newset) && (newset.totalflow + max_flow*(minutes-i)) >= best_flow {
+                        newsets.push(newset);
+                    }
                 }
-                else {
-                    //println!("Not moving to {:?} because it's already been done", dest);
-                }
             }
+
         }
         sets = newsets;
         sets.sort_by(|a, b| b.totalflow.cmp(&a.totalflow));
