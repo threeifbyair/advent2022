@@ -211,7 +211,8 @@ fn main() -> io::Result<()> {
                     let tm = m.clone();
                     newset.apply_move(tm, 0, &valves);
                     newset.apply_move(n, 1, &valves);
-                    if check_and_add_set(&mut sets_done, &newset) && (newset.totalflow + max_flow*(minutes-i)) >= best_flow {
+                    //println!("Minutes left {} valves closed {} total flow {} potential flow {} best flow {}", minutes-i, valves.len() - newset.openvalves.st.len(), newset.totalflow, (newset.totalflow + max_flow*(if minutes-i < valves.len()-newset.openvalves.st.len() { 0 } else { minutes-i-(valves.len()-newset.openvalves.st.len()) })), best_flow);
+                    if check_and_add_set(&mut sets_done, &newset) && (newset.totalflow + max_flow*(if minutes-i < valves.len()-newset.openvalves.st.len() { 0 } else { minutes-i-(valves.len()-newset.openvalves.st.len()) })) >= best_flow {
                         newsets.push(newset);
                     }
                 }
